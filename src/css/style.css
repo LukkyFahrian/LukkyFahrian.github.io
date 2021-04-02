@@ -1,0 +1,321 @@
+/* Body */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: rgb(245, 255, 231);
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    background:  rgb(61, 61, 61);
+    text-align: center;
+    transition: 0.5s;
+}
+
+.sticky {
+    background:  rgb(41, 41, 41);
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+}
+
+.navbar button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Jumbroton */
+.jumbotron {
+    color: white;
+    background-image: url(/src/img/background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.jumbotron .jumboLoad {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: 1s;
+}
+
+.jumbotron .jumboLoad.onLoad 
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.textJumbotron {
+    margin-top: 20px;
+}
+
+.textParJumbotron {
+    margin-top: 30px;
+}
+
+.imgProfile {
+    width: 200px;
+    border: 2px solid white;
+}
+
+/* info panel */
+.card img {
+    width: 70px;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: 1s;
+}
+
+.card.onLoad {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* carousel */
+
+/* about */
+.progress {
+    margin: 5px 0 10px ;
+}
+
+.progHapus {
+    width: 0% !important;
+    transition: .9s;
+}
+
+.aboutProg {
+    font-size: 1em;
+}
+
+.aboutMe {
+    text-align: center;
+}
+
+.titleAbout {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: 1s;
+}
+
+.titleAbout.onLoad {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* tools */
+.slider img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+.slick-track {
+    margin:auto;
+}
+
+.slick-slide {
+    outline: none;
+}
+
+.toolsM img {
+    width: 200px;
+}
+
+/* Portofolio */
+.portoImg {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.portoImg::after {
+    content: '';
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
+    position: absolute;
+    opacity: 0.5;
+}
+
+.portoImg img {
+    max-width: 100%;
+    transition: transform 1s;
+}
+
+.portoImg:hover img{
+    transform: scale(1.2);
+}
+
+.portoBox {
+    width: 100%;
+    height: 380px;
+    background-color: rgb(161, 161, 161);
+    border-radius: 5px;
+    
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: 1s;
+}
+
+.portoBox.onLoad {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.textPorto {
+    display: flex;
+    justify-content: center;
+}
+
+.portoBox a {
+    color: whitesmoke;
+    font-size: 1.5em;
+}
+
+.portoBox:hover a {
+    text-decoration: underline;
+}
+
+.tombolPorto {
+    border-radius: 50px;
+    font-size: 1.5em;
+    padding: 0 100px;
+}
+
+
+/* Contact */
+.contact {
+    height: max-content;
+    background-color: rgb(61, 61, 61);
+}
+
+.contactTitle {
+    color: white;
+    font-weight: bold;
+}
+
+.contacP {
+    color: white;
+}
+
+.iconsSosmed img {
+    width: 40px;
+    margin: 0 5px;
+    transition: transform 0.5s;
+}
+
+.iconsSosmed img:hover {
+    transform: scaleX(-1);
+}
+
+.iconsContact {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.iconsContact img {
+    width: 50px;
+}
+
+.tombolCV {
+    border-radius: 50px;
+}
+
+.copyright h5 {
+    color: white;
+    font-size: 1em;
+}
+
+
+/* Ultilities */
+.tombol {
+    border-radius: 50px;
+    font-size: 1em;
+}
+
+
+/* Dekstop */
+@media (min-width: 992px) {
+    .nav-item {
+        margin-left: 30px;
+    }
+
+    .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        border-bottom: 3px solid white;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+        transform: translateX(9%);
+        transition: width 0.4s ease-out;
+    }
+
+    .nav-link:hover::after {
+        width: 80%; 
+    }
+
+    .jumbotron {
+        height: 450px;
+        padding-top: 150px;
+        background-position: 0 -100px;
+    }
+
+    .sticky {
+        padding: 2px 7px;
+    }
+
+    .textJumbotron {
+        font-weight: bold;
+    }
+
+    .imgProfile {
+        margin-left: 40px;
+    }
+
+    .aboutMe {
+        text-align: justify;
+    }
+
+}
+
+/* Mobile */
+@media (min-width: 576px) {
+    .toolsM {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .slider {
+        display: none;
+    }
+
+    .toolsM-img {
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: 1s;
+    }
+    
+    .toolsM-img.onLoad {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .titlePorto {
+        text-align: center;
+    }
+
+    .portoBox {
+        height: 320px;
+    }
+}
